@@ -1,0 +1,19 @@
+table.pretty {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.pretty td, .pretty th {
+  padding: 4px 10px;
+  border: solid 1px #AAA;
+}
+
+.pretty .price {
+  text-align: right;
+}
+
+.pretty th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}

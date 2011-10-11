@@ -1,0 +1,20 @@
+<% title "Unit Table" %>
+
+<p>
+  <strong>Engine Fields Key:</strong>
+  <%= @unit_table.engine_fields_key %>
+</p>
+<p>
+  <strong>Lineof Business:</strong>
+  <%= @unit_table.lineof_business_id %>
+</p>
+<p>
+  <strong>Amount:</strong>
+  <%= @unit_table.amount %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_unit_table_path(@unit_table) %> |
+  <%= link_to "Destroy", @unit_table, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", unit_tables_path %>
+</p>

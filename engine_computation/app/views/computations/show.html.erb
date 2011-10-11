@@ -1,0 +1,8 @@
+<% title "Show" %>
+
+<%= "Mayor's Permit #{number_to_currency(params[:mayors_fee])}" %><br />
+<%= "Sanitary Inspection #{number_to_currency(sanitary_inspection)}" %><br />
+<%= "Fire Code(National) #{number_to_currency(fire_code_national)}" %><br />
+
+<%= link_to "Back", computations_path %>
+

@@ -1,0 +1,3 @@
+class UnitTable < ActiveRecord::Base
+  attr_accessible :engine_fields_key, :lineof_business_id, :amount
+end

@@ -1,0 +1,10 @@
+<% title "Computation" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @computation.name %>
+</p>
+
+<p>
+  <%= link_to "View All", computations_path %>
+</p>

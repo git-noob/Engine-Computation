@@ -1,0 +1,12 @@
+<%= form_for @engine_process_order do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :engine_fields_value %><br />
+    <%= f.select(:engine_fields_value, engine_fields_for_select, :prompt => '- - -') %>
+  </p>
+  <p>
+    <%= f.label :order_no %><br />
+    <%= f.text_field :order_no %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

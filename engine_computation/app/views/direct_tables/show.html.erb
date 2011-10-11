@@ -1,0 +1,20 @@
+<% title "Direct Table" %>
+
+<p>
+  <strong>Engine Fields Key:</strong>
+  <%= @direct_table.engine_fields_key %>
+</p>
+<p>
+  <strong>Amount:</strong>
+  <%= @direct_table.amount %>
+</p>
+<p>
+  <strong>Lineof Business:</strong>
+  <%= @direct_table.lineof_business_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_direct_table_path(@direct_table) %> |
+  <%= link_to "Destroy", @direct_table, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", direct_tables_path %>
+</p>

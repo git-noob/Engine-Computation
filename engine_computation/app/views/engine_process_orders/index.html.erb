@@ -1,0 +1,19 @@
+<% title "Engine Process Orders" %>
+
+<table>
+  <tr>
+    <th>Engine Fields Value</th>
+    <th>Order No</th>
+  </tr>
+  <% for engine_process_order in @engine_process_orders %>
+    <tr>
+      <td><%= engine_process_order.engine_fields_value %></td>
+      <td><%= engine_process_order.order_no %></td>
+      <td><%= link_to "Show", engine_process_order %></td>
+      <td><%= link_to "Edit", edit_engine_process_order_path(engine_process_order) %></td>
+      <td><%= link_to "Destroy", engine_process_order, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Engine Process Order", new_engine_process_order_path %></p>

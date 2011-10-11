@@ -1,0 +1,16 @@
+<% title "Engine Field" %>
+
+<p>
+  <strong>Key:</strong>
+  <%= @engine_field.key %>
+</p>
+<p>
+  <strong>Value:</strong>
+  <%= @engine_field.value %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_engine_field_path(@engine_field) %> |
+  <%= link_to "Destroy", @engine_field, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", engine_fields_path %>
+</p>

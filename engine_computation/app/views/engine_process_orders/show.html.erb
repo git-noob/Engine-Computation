@@ -1,0 +1,16 @@
+<% title "Engine Process Order" %>
+
+<p>
+  <strong>Engine Fields Value:</strong>
+  <%= @engine_process_order.engine_fields_value %>
+</p>
+<p>
+  <strong>Order No:</strong>
+  <%= @engine_process_order.order_no %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_engine_process_order_path(@engine_process_order) %> |
+  <%= link_to "Destroy", @engine_process_order, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", engine_process_orders_path %>
+</p>

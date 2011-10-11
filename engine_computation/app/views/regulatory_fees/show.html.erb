@@ -1,0 +1,16 @@
+<% title "Regulatory Fee" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @regulatory_fee.name %>
+</p>
+<p>
+  <strong>Remarks:</strong>
+  <%= @regulatory_fee.remarks %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_regulatory_fee_path(@regulatory_fee) %> |
+  <%= link_to "Destroy", @regulatory_fee, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", regulatory_fees_path %>
+</p>

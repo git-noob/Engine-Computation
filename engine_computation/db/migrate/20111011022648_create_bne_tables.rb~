@@ -1,0 +1,19 @@
+class CreateBneTables < ActiveRecord::Migration
+  def self.up
+    create_table :bne_tables do |t|
+      t.string :engine_fields_key
+      t.decimal :minimum
+      t.decimal :maximum
+      t.decimal :amount
+      t.decimal :percent1
+      t.decimal :percent2
+      t.string :fee_based
+      t.integer :lineof_business_id
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :bne_tables
+  end
+end

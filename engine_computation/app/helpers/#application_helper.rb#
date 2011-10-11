@@ -1,0 +1,43 @@
+module ApplicationHelper
+	
+	def sanitary_inspection
+		# for BNE
+		@bne_sanitary = BneTable.find(:first, :conditions => ["lineof_business_id = ? and minimum <= ? and maximum >= ? and engine_fields_key = 'xSanitaryPermit'", params[:lineofbusiness], params[:business_size], params[:business_size]])
+		if @bne_sanitary != nil
+			amount = @bne_sanitary.amount
+			difference = params[:business_size].to_d - @bne_sanitary.minimum
+			percent1 = @bne_sanitary.percent1/100
+			percent2 = @bne_sanitary.percent2/100
+			@total_bne = amount + ((difference * percent1) * percent2 )
+		else
+			@total_bne = 0
+		end
+		
+		# for DIRECT
+		@direct_sanitary = DirectTable.find(:first, :conditions => ["lineof_business_id = ? and engine_fields_key = 'xSanitaryPermit'", params[:lineofbusiness]])
+		if @direct_sanitary != nil
+			@total_direct = @direct_sanitary.amount
+		else
+			@total_direct = 0
+		end
+		
+		# for UNIT
+		@unit_sanitary = UnitTable.find(:first, :conditions => ["lineof_business_id = ? and engine_fields_key = 'xSanitaryPermit'", params[:lineofbusiness]])
+		
+		
+		# for WEI
+		if @total_bne > @total_direct
+			@total_sanitary = @total_bne
+		elsif @total_bne < @total_direct
+			@total_sanitary = @total_direct
+		elsif @total_bne == @total_direct
+			@total_sanitary = @total_bne
+		end
+		
+	end
+	
+	def fire_code_national
+		@fire_code = (params[:mayors_fee].to_d + @total_sanitary) * 0.10
+	end
+	
+end

@@ -1,0 +1,23 @@
+<% title "Unit Tables" %>
+
+<table class="pretty">
+  <tr>
+    <th>Unit For</th>
+    <th>Engine Fields Key</th>
+    <th>Lineof Business</th>
+    <th>Amount</th>
+  </tr>
+  <% for unit_table in @unit_tables %>
+    <tr>
+      <td><%= unit_table.name %></td>
+      <td><%= unit_table.engine_fields_key %></td>
+      <td><%= unit_table.lineof_business.name %></td>
+      <td class="price"><%= number_to_currency(unit_table.amount) %></td>
+      <td><%= link_to "Show", unit_table %></td>
+      <td><%= link_to "Edit", edit_unit_table_path(unit_table) %></td>
+      <td><%= link_to "Destroy", unit_table, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Unit Table", new_unit_table_path %></p>

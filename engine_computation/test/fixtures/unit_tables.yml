@@ -1,0 +1,9 @@
+one:
+  engine_fields_key: MyString
+  lineof_business_id: 1
+  amount: 9.99
+
+two:
+  engine_fields_key: MyString
+  lineof_business_id: 1
+  amount: 9.99

@@ -1,0 +1,21 @@
+<% title "Direct Tables" %>
+
+<table class="pretty">
+  <tr>
+    <th>Engine Fields Key</th>
+    <th>Amount</th>
+    <th>Lineof Business</th>
+  </tr>
+  <% for direct_table in @direct_tables %>
+    <tr>
+      <td><%= direct_table.engine_fields_key %></td>
+      <td class="price"><%= number_to_currency(direct_table.amount) %></td>
+      <td><%= direct_table.lineof_business.name %></td>
+      <td><%= link_to "Show", direct_table %></td>
+      <td><%= link_to "Edit", edit_direct_table_path(direct_table) %></td>
+      <td><%= link_to "Destroy", direct_table, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Direct Table", new_direct_table_path %></p>

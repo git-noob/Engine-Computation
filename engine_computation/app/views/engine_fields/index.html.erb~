@@ -1,0 +1,19 @@
+<% title "Engine Fields" %>
+
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Value</th>
+  </tr>
+  <% for engine_field in @engine_fields %>
+    <tr>
+      <td><%= engine_field.key %></td>
+      <td><%= engine_field.value %></td>
+      <td><%= link_to "Show", engine_field %></td>
+      <td><%= link_to "Edit", edit_engine_field_path(engine_field) %></td>
+      <td><%= link_to "Destroy", engine_field, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Engine Field", new_engine_field_path %></p>

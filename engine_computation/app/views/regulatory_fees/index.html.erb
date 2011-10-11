@@ -1,0 +1,19 @@
+<% title "Regulatory Fees" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Remarks</th>
+  </tr>
+  <% for regulatory_fee in @regulatory_fees %>
+    <tr>
+      <td><%= regulatory_fee.name %></td>
+      <td><%= regulatory_fee.remarks %></td>
+      <td><%= link_to "Show", regulatory_fee %></td>
+      <td><%= link_to "Edit", edit_regulatory_fee_path(regulatory_fee) %></td>
+      <td><%= link_to "Destroy", regulatory_fee, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Regulatory Fee", new_regulatory_fee_path %></p>

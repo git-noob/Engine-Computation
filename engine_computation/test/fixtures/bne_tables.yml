@@ -1,0 +1,19 @@
+one:
+  engine_fields_key: MyString
+  minimum: 9.99
+  maximum: 9.99
+  amount: 9.99
+  percent1: 9.99
+  percent2: 9.99
+  fee_based: MyString
+  lineof_business_id: 1
+
+two:
+  engine_fields_key: MyString
+  minimum: 9.99
+  maximum: 9.99
+  amount: 9.99
+  percent1: 9.99
+  percent2: 9.99
+  fee_based: MyString
+  lineof_business_id: 1

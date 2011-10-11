@@ -1,0 +1,14 @@
+<% title "Computations" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for computation in @computations %>
+    <tr>
+      <td><%= computation.name %></td>
+      <td><%= link_to "Show", computation %></td>
+    </tr>
+  <% end %>
+</table>
+

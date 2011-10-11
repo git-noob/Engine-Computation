@@ -1,0 +1,40 @@
+<% title "Bne Table" %>
+
+<p>
+  <strong>Engine Fields Key:</strong>
+  <%= @bne_table.engine_fields_key %>
+</p>
+<p>
+  <strong>Minimum:</strong>
+  <%= @bne_table.minimum %>
+</p>
+<p>
+  <strong>Maximum:</strong>
+  <%= @bne_table.maximum %>
+</p>
+<p>
+  <strong>Amount:</strong>
+  <%= @bne_table.amount %>
+</p>
+<p>
+  <strong>Percent1:</strong>
+  <%= @bne_table.percent1 %>
+</p>
+<p>
+  <strong>Percent2:</strong>
+  <%= @bne_table.percent2 %>
+</p>
+<p>
+  <strong>Fee Based:</strong>
+  <%= @bne_table.fee_based %>
+</p>
+<p>
+  <strong>Lineof Business:</strong>
+  <%= @bne_table.lineof_business_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_bne_table_path(@bne_table) %> |
+  <%= link_to "Destroy", @bne_table, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", bne_tables_path %>
+</p>

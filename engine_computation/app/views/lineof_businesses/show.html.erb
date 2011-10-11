@@ -1,0 +1,16 @@
+<% title "Lineof Business" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lineof_business.name %>
+</p>
+<p>
+  <strong>Remarks:</strong>
+  <%= @lineof_business.remarks %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_lineof_business_path(@lineof_business) %> |
+  <%= link_to "Destroy", @lineof_business, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", lineof_businesses_path %>
+</p>

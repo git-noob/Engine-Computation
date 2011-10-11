@@ -1,0 +1,19 @@
+<% title "Lineof Businesses" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Remarks</th>
+  </tr>
+  <% for lineof_business in @lineof_businesses %>
+    <tr>
+      <td><%= lineof_business.name %></td>
+      <td><%= lineof_business.remarks %></td>
+      <td><%= link_to "Show", lineof_business %></td>
+      <td><%= link_to "Edit", edit_lineof_business_path(lineof_business) %></td>
+      <td><%= link_to "Destroy", lineof_business, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Lineof Business", new_lineof_business_path %></p>

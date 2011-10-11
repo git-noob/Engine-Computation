@@ -1,0 +1,36 @@
+<%= form_for @bne_table do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :engine_fields_key %><br />
+    <%= f.select(:engine_fields_key, engine_fields_for_select, :prompt => '- - -') %>
+  </p>
+  <p>
+    <%= f.label :minimum %><br />
+    <%= f.text_field :minimum %>
+  </p>
+  <p>
+    <%= f.label :maximum %><br />
+    <%= f.text_field :maximum %>
+  </p>
+  <p>
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </p>
+  <p>
+    <%= f.label :percent1 %><br />
+    <%= f.text_field :percent1 %>
+  </p>
+  <p>
+    <%= f.label :percent2 %><br />
+    <%= f.text_field :percent2 %>
+  </p>
+  <p>
+    <%= f.label :fee_based %><br />
+    <%= f.text_field :fee_based %>
+  </p>
+  <p>
+    <%= f.label :lineof_business_id %><br />
+    <%= f.select(:lineof_business_id, lineofbusiness_for_select, :prompt => '- - -') %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

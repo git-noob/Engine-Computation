@@ -1,0 +1,25 @@
+<% title "Bne Tables" %>
+
+<table class="pretty">
+  <tr>
+    <th>Engine Fields Key</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Amount</th>
+    <th>Fee Based</th>
+  </tr>
+  <% for bne_table in @bne_tables %>
+    <tr>
+      <td><%= bne_table.engine_fields_key %></td>
+      <td><%= number_with_precision(bne_table.minimum, :precision => 2, :delimiter => ',') %></td>
+      <td><%= number_with_precision(bne_table.maximum, :precision => 2, :delimiter => ',') %></td>
+      <td class="price"><%= number_to_currency(bne_table.amount) %></td>
+      <td><%= bne_table.fee_based %></td>
+      <td><%= link_to "Show", bne_table %></td>
+      <td><%= link_to "Edit", edit_bne_table_path(bne_table) %></td>
+      <td><%= link_to "Destroy", bne_table, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Bne Table", new_bne_table_path %></p>

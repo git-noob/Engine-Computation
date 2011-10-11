@@ -1,0 +1,10 @@
+<% title "Computations" %>
+
+<%= form_tag computation_show_path, :method => 'get' do %>
+	<% @lineof_business = LineofBusiness.all %>
+	<%= label_tag "", "Line of Business: " %><%= select_tag "lineofbusiness", options_from_collection_for_select(@lineof_business, "id", "name"), :include_blank => true %><br />
+	<%= label_tag "", "Mayor's Permit: " %><%= text_field_tag "mayors_fee" %><br />
+	<%= label_tag "", "Business Size: " %><%= text_field_tag "business_size" %><br />
+	<%= submit_tag "Show" %>
+<% end %>
+

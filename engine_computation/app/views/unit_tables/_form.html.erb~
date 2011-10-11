@@ -1,0 +1,16 @@
+<%= form_for @unit_table do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :engine_fields_key %><br />
+    <%= f.text_field :engine_fields_key %>
+  </p>
+  <p>
+    <%= f.label :lineof_business_id %><br />
+    <%= f.text_field :lineof_business_id %>
+  </p>
+  <p>
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

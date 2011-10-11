@@ -1,0 +1,12 @@
+<%= form_for @engine_field do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :key %><br />
+    <%= f.text_field :key %>
+  </p>
+  <p>
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
